@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>제목:{{review.title}}</p>
+<div>{{review.content}}</div>
+<div>{{review.created_at|date:'Y년 m월 d일'}}</div>
+
+<button><a href="{% url 'pairapp:delete' review.pk %}">리뷰 삭제</a></button>
+<!-- <button><a href="{% url 'pairapp:edit' review.pk %}">리뷰 수정</a></button> -->
+{% endblock %}
