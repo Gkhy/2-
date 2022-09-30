@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'pairapp:create' %}">
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">리뷰</label>
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput"
+      placeholder="제목을 작성해주세요."
+      name="title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">내용</label>
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput2"
+      placeholder="내용을 작성해주세요."
+      name="content"
+    />
+  </div>
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit">리뷰 쓰기</button>
+  </div>
+</form>
+{% endblock %}
