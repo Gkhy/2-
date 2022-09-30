@@ -1,33 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container mt-5">
-  <form action="{% url 'pairapp:create' %}">
-    <div class="mb-3 mt-3">
-      <label for="formGroupExampleInput" class="form-label"
-        ><h4>리뷰</h4>
-      </label>
+  <h1>수정 페이지</h1>
+  <form action="{% url 'pairapp:update' review.pk %}">
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">리뷰</label>
       <input
         type="text"
         class="form-control"
         id="formGroupExampleInput"
         placeholder="제목을 작성해주세요."
         name="title"
-        required
+        value="{{ review.title }}"
       />
     </div>
-    <label for="floatingTextarea2" class="form-label"><h4>내용</h4></label>
     <div class="form-floating mb-3">
       <textarea
         class="form-control"
         name="content"
         id="floatingTextarea2"
         style="height: 100px"
-        required
-      ></textarea>
+        value="{{ review.content }}"
+      >
+{{ review.content }}</textarea
+      >
       <label for="floatingTextarea2"></label>
     </div>
     <div class="d-grid gap-2">
       <button class="btn btn-primary btn-img mb-3" type="submit">
-        리뷰 쓰기
+        리뷰 수정
       </button>
     </div>
   </form>

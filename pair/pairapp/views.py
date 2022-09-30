@@ -26,7 +26,7 @@ def create(request):
 
 def detail(request, pk):
     review = Review.objects.get(pk=pk)
-    pk_ = pk
+
     context = {
         "review": review,
     }
@@ -38,4 +38,20 @@ def delete(request, pk):
     review = Review.objects.get(pk=pk)
     review.delete()
 
+    return redirect("pairapp:index")
+
+def edit(request, pk):
+    review = Review.objects.get(pk=pk)
+
+    context = {
+        "review": review,
+    }
+    return render(request, "pairapp/edit.html", context)
+
+def update(request, pk):
+    review = Review.objects.get(pk=pk)
+    review.title = request.GET.get('title')
+    review.content = request.GET.get('content')
+    review.save()
+    
     return redirect("pairapp:index")

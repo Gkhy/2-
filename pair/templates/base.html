@@ -1,22 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      .kuromi {
+        width: 325px;
+        height: 215px;
+      }
+      .icon-btn-size {
+        width: 60px;
+        height: 60px;
+      }
+      .icon-btn {
+        background-position: -110px -150px;
+      }
+      .btn-img {
+        background: url("https://i.pinimg.com/236x/52/a0/4f/52a04fb14f46e64ef13fa9f776fcdb88.jpg");
+      }
+      a {
+        color: black;
+      }
+      .container {
+        border: 3px solid #fbcce8;
+        border-radius: 1.3rem;
+        background-color: #fff7fc;
+        max-width: 720px;
+      }
 
-<body>
+      .form-control {
+        background-color: #fffdfe;
+      }
+      .card-header {
+        background-color: #ffd0ee;
+        border-radius: 1rem;
+      }
+      .card-body {
+        background-color: #fff1fa;
+        border-radius: 1rem;
+      }
+      .card {
+        border: 2px solid #fbcce8;
+        border-radius: 0.8rem;
+        background-color: #fff1fa;
+      }
+      .card-header:first-child {
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
 
-    {% block content %}
-    {% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-</body>
+  <body>
+    {% block content %} {% endblock %}
+    <div class="d-flex justify-content-center">
+      <img
+        class="kuromi m-3"
+        src="https://images-ext-1.discordapp.net/external/2Ql3LJJtKIK9rkRw4D-Skh99pYGRIAE6wnc_YG7IfXM/%3Ftype%3Dw800/https/mblogthumb-phinf.pstatic.net/MjAyMDEwMTBfMTY4/MDAxNjAyMzAwOTUzNTkz.0-srBWoL89b7gnOXJRzeamrd_JYe1hfeFrcd7zhIXvog.j3_i40CCo-LuZyoukKqYi3om264ZJsK10dC_oSLIOg0g.PNG.jinju150/SANRIO_STICKER_PACK1_%285%29.png"
+        alt=""
+      />
+    </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

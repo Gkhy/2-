@@ -1,9 +1,26 @@
-{% extends 'base.html' %}
-{% block content %}
-<p>제목:{{review.title}}</p>
-<div>{{review.content}}</div>
-<div>{{review.created_at|date:'Y년 m월 d일'}}</div>
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5 d-flex flex-column align-items-center">
+  <div
+    class="card text-dark mb-3 mt-1"
+    style="width: 100%; background-color: #fff1fa"
+  >
+    <div class="card-header">
+      <h1 style="text-align: center">{{review.title}}</h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{review.content}}</h5>
+      <p class="card-text">{{review.created_at|date:'Y년 m월 d일'}}</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <a href="{% url 'pairapp:edit' review.pk %}"
+      ><button class="btn btn-primary mx-1 btn-img mb-3">리뷰 수정</button></a
+    >
 
-<button><a href="{% url 'pairapp:delete' review.pk %}">리뷰 삭제</a></button>
-<!-- <button><a href="{% url 'pairapp:edit' review.pk %}">리뷰 수정</a></button> -->
+    <a href="{% url 'pairapp:delete' review.pk %}"
+      ><button class="btn btn-primary mx-1 btn-img mb-3">리뷰 삭제</button></a
+    >
+  </div>
+</div>
+
 {% endblock %}
