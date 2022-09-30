@@ -12,9 +12,9 @@
     <tbody>
         {% for review in reviews %}
         <tr>
-            <th scope="row"><a href="{url 'pairapp:detail'}">{{reveiws.id}}</a></th>
-            <td>{{reveiws.title}}</td>
-            <td>{{reveiws.created_at}}</td>
+            <th scope="row"><a href="{url 'pairapp:detail'}">{{review.id}}</a></th>
+            <td>{{review.title}}</td>
+            <td>{{review.created_at}}</td>
         </tr>
         {% endfor %}
     </tbody>
