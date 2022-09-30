@@ -3,4 +3,9 @@ from . import views
 
 app_name = "pairapp"
 
-urlpatterns = [path("index/", views.index)]
+urlpatterns = [
+    path("", views.index, name='index'),
+    path("new/", views.new, name='new'),
+    path("create/", views.create, name='create'),
+    # path("detail/", views.detail, name='detail'),
+]
